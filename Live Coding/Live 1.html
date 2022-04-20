@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<body style="background-color:#43d66a; font-family: Arial, Helvetica, sans-serif;">
+        <h1 style="text-align: center; color: white;"> TUGAS (live Coding) </h1>
+        <fieldset style="margin:auto; background-color: rgb(255, 255, 255); align-items: center; width: 250px; border: none;">
+            <form name="test" method="post"> 
+                <br><label>Nama Lengkap: </label><br>
+                <input type="text" name="nama" style="box-sizing: border-box; width: 100%; padding: 10px; font-size: 11pt; margin-bottom: 20px;">
+                <label>Email: </label><br>
+                <input type="text" size=45 name="email" style="box-sizing: border-box; width: 100%; padding: 10px; font-size: 11pt; margin-bottom: 20px;">
+                <label>Alamat: </label><br>
+                <textarea type="text" cols="45" rows="9" name="alamat"></textarea><br>
+                <input type="submit" value="DAFTAR" style="background-color: blue; color: white; padding: 10px 10px; border: 1px; font-size: 11pt;" onclick="check()">
+            </form>
+        </fieldset>
+        <script type="text/javascript">
+			function check() {
+                var Nama_Lengkap = document.test.nama.value;
+                var Email = document.test.email.value;
+                var Alamat = document.test.alamat.value;
+                if(Nama_Lengkap == ""){
+                    alert("Silahkan isi nama terlebih dahulu");
+                }
+                else if(Nama_Lengkap.length <= 5){
+                    alert("input kurang dari 5 karakter");
+                }
+                else if(Email == ""){
+                    alert("Silahkan isi Email terlebih dahulu");
+                }
+                else if(Alamat == ""){
+                    alert("Silahkan isi Alamat terlebih dahulu");
+                }
+                else{
+                    alert("Data berhasil diinputkan")
+                }
+            }
+		</script>
+	</body>    
+</html>
